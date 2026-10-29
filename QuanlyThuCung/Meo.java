@@ -13,8 +13,19 @@ public class Meo extends ThuCung {
     public String getloaiLong() { return loaiLong; }
     public String gettapTinh() { return tapTinh; }
  
-    public void setloaiLong(String loaiLong) { this.loaiLong=loaiLong; }
-    public void settapTinh(String tapTinh) { this.tapTinh=tapTinh; }
+    public void setloaiLong(String loaiLong) {
+      if (loaiLong == null || loaiLong.trim().isEmpty()) {
+          throw new IllegalArgumentException("Giong cho khong duoc de trong!");
+      }
+      this.loaiLong = loaiLong.trim();
+    }
+
+    public void settapTinh(String tapTinh) {
+      if (tapTinh == null || tapTinh.trim().isEmpty()) {
+          throw new IllegalArgumentException("Giong cho khong duoc de trong!");
+      }
+      this.tapTinh = tapTinh.trim();
+    }
  
     @Override
     public String getLoai() {

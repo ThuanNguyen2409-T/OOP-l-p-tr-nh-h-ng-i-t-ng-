@@ -13,8 +13,19 @@ public class Cho extends ThuCung {
     public String getgiongCho() { return giongCho; }
     public String getmucDoVanDong() { return mucDoVanDong; }
  
-    public void setgiongCho(String giongCho) { this.giongCho=giongCho; }
-    public void setmucDoVanDong(String mucDoVanDong) { this.mucDoVanDong=mucDoVanDong; }
+    public void setgiongCho(String giongCho) {
+      if (giongCho == null || giongCho.trim().isEmpty()) {
+          throw new IllegalArgumentException("Giong cho khong duoc de trong!");
+      }
+      this.giongCho = giongCho.trim();
+    }
+
+    public void setmucDoVanDong(String mucDoVanDong) {
+      if (mucDoVanDong == null || mucDoVanDong.trim().isEmpty()) {
+          throw new IllegalArgumentException("Muc do van dong khong duoc de trong!");
+      }
+      this.mucDoVanDong = mucDoVanDong.trim();
+  }
  
     @Override
     public String getLoai() {

@@ -1,6 +1,6 @@
 package Dichvuvahoadon;
 
-import quanlythucung;
+import QuanlyThuCung.ThuCung;
 /* còn thiếu 1 số file từ class thu cưng á sửa lại cho phù hợp tên biến nha  */
 public class chiTiethoaDon {
     private ThuCung thuCung;
